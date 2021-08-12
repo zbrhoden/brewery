@@ -35,7 +35,6 @@ export const Orders = () => {
     let html = "<ul>"
 
     for (const order of orders) {
-        console.log ("this order:", order)
         const employee = findEmployee(order, employees)
         const product = findProduct(order, products)
         html += `<li>${product.name} was sold by ${employee.name} on ${new Date(order.timestamp).toLocaleDateString()}</li>`
